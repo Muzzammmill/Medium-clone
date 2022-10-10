@@ -1,0 +1,359 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 1s linear;
+}
+
+.banner {
+  background: #FFC017;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  padding: 0 20px;
+  border-bottom: 1px solid #000;
+  background-color: #FFC017;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  max-width: 170px;
+  height: 70px;
+  margin: auto 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  display: none;
+}
+
+button {
+  height: fit-content;
+  min-width: 130px;
+  margin: auto 0;
+  background: #000;
+  padding: 10px 32px;
+  border-radius: 100px;
+  color: #fff;
+  border: none;
+}
+
+.banner-content {
+  padding: 35px 1rem;
+  margin: 5rem 0;
+}
+
+.banner-heading {
+  margin: 25px 0;
+  font-weight: 400;
+  font-size: 25vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.banner-words {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.animate {
+  display: none;
+}
+
+.trending {
+  margin: 20px 0;
+  border-bottom: 2px solid rgb(199, 194, 194);
+}
+
+.blogs {
+  margin: 15px 0;
+  padding: 15px;
+}
+
+.blog-number {
+  color: #eee;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: lightgrey;
+  background: url(./assets/img/customers.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blog {
+  margin: 20px 0;
+}
+
+.first-part {
+  display: flex;
+}
+
+
+.first-part a {
+  margin-left: 20px;
+}
+
+.row1 button {
+  background: none;
+  border: 1px solid #eee;
+  border-radius: 0;
+  color: rgb(204, 197, 197);
+  font-weight: 700;
+  margin: .4rem .5rem;
+}
+
+.row1 {
+  margin: .8rem 1.3rem;
+}
+
+.discover-title {
+  margin: .8rem 1.3rem;
+}
+
+.tag-btn {
+  border-bottom: 1px solid rgb(204, 197, 197);
+}
+
+.discover-links {
+  margin: 2rem 0;
+  display: none;
+}
+
+.row2 {
+  margin: 1.4rem 0;
+
+}
+
+.discover-links a {
+  color: rgb(204, 197, 197);
+  margin: 2rem 1.4rem;
+  font-family: sans-serif;
+}
+
+.discover-tag {
+  margin: 1.3rem 0;
+}
+
+.article-flex {
+  margin: 1.3rem 0;
+}
+
+.article-content-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(187, 179, 179);
+}
+
+.article-content-mini-btn {
+  background: rgb(235, 232, 232);
+  color: #292727;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: rgb(156, 152, 152);
+}
+
+.article-img img {
+  width: 100%;
+}
+
+.article-content-top,
+.article-content h3,
+.article-content p {
+  margin-top: 1rem;
+}
+
+.article-img {
+  margin: 1.3rem 0;
+}
+
+.article {
+  padding: .5rem;
+}
+
+
+@media screen and (min-width: 650px) {
+  nav ul li {
+    display: block;
+    margin: auto 0;
+    padding: 0 12px;
+  }
+
+  nav ul {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 912px) {
+  .animate {
+    display: block;
+    margin: auto 20px;
+  }
+
+  .banner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35px;
+  }
+
+  .animate p,
+  .animate span {
+    letter-spacing: 10px;
+    line-height: 2;
+
+  }
+
+  .animate span,
+  .three {
+    animation: vanish 4s infinite linear;
+  }
+
+  .one,
+  .two {
+    animation: vanish 7s infinite linear;
+  }
+
+  @keyframes vanish {
+    0% {
+      opacity: 1;
+    }
+
+    25% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    75% {
+      opacity: 0.7;
+    }
+
+    100% {
+      opacity: 0.9;
+    }
+  }
+
+  .blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+
+  .blog {
+    display: flex;
+    flex: 0 0 calc(33.33% - 2rem);
+  }
+
+  .blog-content {
+    margin: 0 10px;
+  }
+
+  .trending-heading {
+    margin: 10px 30px;
+  }
+
+  nav {
+    position: sticky;
+    z-index: 10;
+  }
+
+  .blog-number {
+    font-size: 25px;
+  }
+
+
+  .banner-heading {
+    font-size: 70px;
+  }
+
+  .discover {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .discover-tag,
+  .article {
+    flex: 0 0 calc(50% - 1.5rem);
+  }
+
+  .discover-tag {
+    position: sticky;
+    top: 80px;
+    height: 30vh;
+  }
+
+  .discover-links {
+    display: block;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .article-content-top {
+    display: flex;
+  }
+
+  .article-content-circle,
+  .article-content-top h6 {
+    margin: .3rem .6rem;
+  }
+
+  .article-content-top h6 {
+    margin: auto .6rem;
+  }
+
+  .article {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .article-content {
+    margin: auto 0;
+  }
+
+  .banner-wrapper {
+    margin: auto 0;
+  }
+
+  .article-content,
+  .article-img {
+    flex: 0 0 calc(50% - 1.5rem);
+  }
+
+}
