@@ -78,6 +78,8 @@ button {
 
 .animate {
   display: none;
+  transform: translate3d(0px, 0px, 0px);
+
 }
 
 .trending {
@@ -287,11 +289,6 @@ a {
 
   .trending-heading {
     margin: 10px 30px;
-  }
-
-  nav {
-    position: sticky;
-    z-index: 10;
   }
 
   .blog-number {

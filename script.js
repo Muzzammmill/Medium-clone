@@ -1,7 +1,8 @@
 const articles = document.querySelectorAll(".article")
 const articleCont = document.querySelector(".article-wrapper")
 const nav = document.querySelector("nav")
-const navBtn = document.querySelector(".btn1")
+const navBtn = document.querySelector(".navBtn")
+const banner = document.querySelector(".banner")
 
 function loadNewArticle() {
   for (let article of articles) {
@@ -23,14 +24,16 @@ lastArticleObserver.observe(document.querySelector(".article-flex:last-child"))
 
 console.log(articles);
 
-
-const navObserver = new IntersectionObserver(entry => {
-  if (entry.isIntersecting) {
-    nav.style.backgroundColor = "white";
-    navBtn.style.backgroundColor = "green"
-  }
-  // },
-  //   {
-  //     threshold: 1,
+const navObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      nav.style.backgroundColor = "white"
+      navBtn.style.backgroundColor = "green"
+    } else {
+      nav.style.backgroundColor = null
+      navBtn.style.backgroundColor = null
+    }
+  })
 })
-navObserver.observe(nav)
+
+navObserver.observe(banner)
